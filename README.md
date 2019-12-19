@@ -14,4 +14,4 @@ Actual output observed when running the Google image classification sample in th
 > 19.12.19 10:37:07 (+0200)  main  Platycercus elegans (Crimson Rosella)
 > 19.12.19 10:37:07 (+0200)  main  Score :  0.152344
 
-Application was built using documentation available at: https://coral.ai/examples/classify-image/
+This application was built based on the mendel-chef distribution, using documentation available at: https://coral.ai/examples/classify-image/
