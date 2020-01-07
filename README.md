@@ -2,7 +2,7 @@ Present sample Application is built for the [Google Coral Dev Board](https://cor
 
 This repository provides an example that sets up the TPU accelerator, so that it can be used from within a container running on balenaOS on the Google Coral Dev Board.
 
-The `Dockerfile` contains comments regarding the installation of various packages that are needed to run the sample pythin application provided by Google.
+The `Dockerfile` contains comments regarding the installation of various packages that are needed to run the sample python application provided by Google.
 
 Actual output observed when running the Google image classification python sample in this APP:
 
