@@ -19,10 +19,17 @@ RUN \
     libedgetpu-dev \
     python3-edgetpu \
     edgetpu-examples \
-    python3-pip
+    python3-pip \
+    imx-gpu-viv \
+    weston-imx
 
 WORKDIR /usr/src/app
+
+RUN \
+    find /lib/modules -type f -name 'galcore.ko' -print0 | xargs -0 -I{} cp {} /usr/src/app/galcore.ko
+
 COPY run_sample.sh run_sample.sh
+COPY start_weston.sh start_weston.sh
 
 ENV UDEV=1
 
