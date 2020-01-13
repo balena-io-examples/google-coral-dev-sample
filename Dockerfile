@@ -19,10 +19,32 @@ RUN \
     libedgetpu-dev \
     python3-edgetpu \
     edgetpu-examples \
-    python3-pip
+    python3-pip \
+    imx-gpu-viv \
+    weston-imx
+
+#RUN \
+#    apt-get update && apt-get install -y gstreamer1.0-plugins-base=1.12.2+imx-2 \
+#    libgstreamer1.0-0=1.12.2+imx-2 \
+#    libgstreamer-plugins-base1.0-0=1.12.2+imx-2 \
+#    imx-gst1.0-plugin=4.3.4-4 \
+#    gstreamer1.0-plugins-good=1.12.2+imx-4 \
+#    gstreamer1.0-plugins-base-apps=1.12.2+imx-2 \
+#    gstreamer1.0-tools=1.12.2+imx-2 \
+#    gstreamer1.0-plugins-bad=1.12.2+imx-5 \
+#    gstreamer1.0-pulseaudio=1.12.2+imx-4 \
+#    libdrm-vivante=2.4.84+imx-mendel2 \
+#    libdrm-libkms=2.4.84+imx-mendel2 \
+#    wayland-protocols=1.13+imx-2 \
+#    libgstreamer-plugins-bad1.0-0=1.12.2+imx-5
 
 WORKDIR /usr/src/app
+
+RUN \
+    find /lib/modules -type f -name 'galcore.ko' -print0 | xargs -0 -I{} cp {} /usr/src/app/galcore.ko
+
 COPY run_sample.sh run_sample.sh
+COPY start_weston.sh start_weston.sh
 
 ENV UDEV=1
 

@@ -7,4 +7,6 @@ python3 classify_image.py \
     --label models/inat_bird_labels.txt \
     --image images/parrot.jpg
 
+/bin/bash /usr/src/app/start_weston.sh &
+
 sleep infinity
