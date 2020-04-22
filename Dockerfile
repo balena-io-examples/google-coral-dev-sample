@@ -8,9 +8,9 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN \
     echo "deb https://packages.cloud.google.com/apt coral-edgetpu-stable main" | tee /etc/apt/sources.list.d/coral-edgetpu.list && \
     curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - && \
-    printf "deb [arch=arm64] https://packages.cloud.google.com/apt mendel-bsp-enterprise-chef main \n deb-src https://packages.cloud.google.com/apt mendel-bsp-enterprise-chef main" \
+    printf "deb [arch=arm64] https://packages.cloud.google.com/apt mendel-bsp-enterprise-day main \n deb-src https://packages.cloud.google.com/apt mendel-bsp-enterprise-day main" \
     | tee /etc/apt/sources.list.d/multistrap-bsp.list && \
-    printf "deb [arch=arm64] https://packages.cloud.google.com/apt mendel-chef main \n deb-src https://packages.cloud.google.com/apt mendel-chef main" \
+    printf "deb [arch=arm64] https://packages.cloud.google.com/apt mendel-day main \n deb-src https://packages.cloud.google.com/apt mendel-day main" \
     | tee /etc/apt/sources.list.d/multistrap-main.list
 
 # Install Coral Dev samples and dependencies
@@ -24,19 +24,25 @@ RUN \
     weston-imx
 
 #RUN \
-#    apt-get update && apt-get install -y gstreamer1.0-plugins-base=1.12.2+imx-2 \
-#    libgstreamer1.0-0=1.12.2+imx-2 \
-#    libgstreamer-plugins-base1.0-0=1.12.2+imx-2 \
-#    imx-gst1.0-plugin=4.3.4-4 \
-#    gstreamer1.0-plugins-good=1.12.2+imx-4 \
-#    gstreamer1.0-plugins-base-apps=1.12.2+imx-2 \
-#    gstreamer1.0-tools=1.12.2+imx-2 \
-#    gstreamer1.0-plugins-bad=1.12.2+imx-5 \
-#    gstreamer1.0-pulseaudio=1.12.2+imx-4 \
-#    libdrm-vivante=2.4.84+imx-mendel2 \
-#    libdrm-libkms=2.4.84+imx-mendel2 \
-#    wayland-protocols=1.13+imx-2 \
-#    libgstreamer-plugins-bad1.0-0=1.12.2+imx-5
+#    apt-get update && apt-get install -y gstreamer1.0-plugins-base=1.14.4+imx-5 \
+#    libgstreamer1.0-0=1.14.4+imx-3 \
+#    libgstreamer-plugins-base1.0-0=1.14.4+imx-5 \
+#    imx-gst1.0-plugin=4.4.5-5 \
+#    gstreamer1.0-plugins-good=1.14.4+imx-5 \
+#    gstreamer1.0-plugins-bad=1.14.4+imx-7 \
+#    libdrm-vivante=2.4.84+imx-mendel3 \
+#    libgstreamer-plugins-bad1.0-0=1.14.4+imx-7 \
+#    libgstreamer-gl1.0-0=1.14.4+imx-5 \
+#    gstreamer1.0-python3-plugin-loader=1.14.4-1+b1 \
+#    python3-gst-1.0=1.14.4-1+b1 \
+#    gstreamer1.0-plugins-ugly=1.14.4-1 \
+#    gir1.2-gst-plugins-base-1.0=1.14.4-2 \
+#    gir1.2-gstreamer-1.0=1.14.4-1 \
+#    gstreamer1.0-gl=1.14.4+imx-5 \
+#    gstreamer1.0-tools=1.14.4+imx-3 \
+#    libdrm-libkms=2.4.84+imx-mendel3 \
+#    wayland-protocols=1.17+imx-1
+
 
 WORKDIR /usr/src/app
 

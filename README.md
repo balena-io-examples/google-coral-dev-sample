@@ -15,7 +15,7 @@ Actual output observed when running the Google image classification python sampl
 > 19.12.19 10:37:07 (+0200)  main  Score :  0.613281
 
 
-This application was built based on the mendel-chef distribution, using documentation available at: https://coral.ai/examples/classify-image/
+This application was built based on the mendel-day distribution, using documentation available at: https://coral.ai/examples/classify-image/
 
 For GStreamer use-cases, the imx packages can be set-up by uncommenting the following line in the Dockerfile:
 
