@@ -17,9 +17,9 @@ Actual output observed when running the Google image classification python sampl
 
 This application was built based on the mendel-day distribution, using documentation available at: https://coral.ai/examples/classify-image/
 
-For GStreamer use-cases, the imx packages can be set-up by uncommenting the following line in the Dockerfile:
+For GStreamer use-cases, the imx packages can be set-up by uncommenting the all the packages that are commented in the Dockerfile, for example:
 
-> RUN apt-get update && apt-get install gstreamer1.0-plugins-base=1.12.2+imx-2 libgstreamer1.0-0=1.12.2+imx-2 libgstreamer-plugins-base1.0-0=1.12.2+imx-2 imx-gst1.0-plugin=4.3.4-4 gstreamer1.0-plugins-good=1.12.2+imx-4 gstreamer1.0-plugins-base-apps=1.12.2+imx-2 gstreamer1.0-tools=1.12.2+imx-2 gstreamer1.0-plugins-bad=1.12.2+imx-5 gstreamer1.0-pulseaudio=1.12.2+imx-4 libdrm-vivante=2.4.84+imx-mendel2 libdrm-libkms=2.4.84+imx-mendel2 wayland-protocols=1.13+imx-2 libgstreamer-plugins-bad1.0-0=1.12.2+imx-5
+> RUN apt-get update && apt-get install gstreamer1.0-plugins-base=1.12.2+imx-2 libgstreamer1.0-0=1.12.2+imx-2 libgstreamer-plugins-base1.0-0=1.12.2+imx-2 imx-gst1.0-plugin=4.3.4-4 gstreamer1.0-plugins-good=1.12.2+imx-4 gstreamer1.0-plugins-base-apps=1.12.2+imx-2 gstreamer1.0-tools=1.12.2+imx-2 gstreamer1.0-plugins-bad=1.12.2+imx-5 gstreamer1.0-pulseaudio=1.12.2+imx-4 libdrm-vivante=2.4.84+imx-mendel2 libdrm-libkms=2.4.84+imx-mendel2 wayland-protocols=1.13+imx-2 libgstreamer-plugins-bad1.0-0=1.12.2+imx-5 ...
 
 NOTE: The above packages are commented out and not installed by default in the Dockerfile as this will lead to an increase of the overall image size.
 It is recommended to always install only the packages that are going to be used in the target application.
