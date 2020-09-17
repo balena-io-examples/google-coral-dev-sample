@@ -23,8 +23,9 @@ RUN \
     imx-gpu-viv \
     weston-imx
 
+# Uncomment these for video output
 #RUN \
-#    apt-get update && apt-get install -y gstreamer1.0-plugins-base=1.14.4+imx-5 \
+#    apt-get install -y gstreamer1.0-plugins-base=1.14.4+imx-5 \
 #    libgstreamer1.0-0=1.14.4+imx-3 \
 #    libgstreamer-plugins-base1.0-0=1.14.4+imx-5 \
 #    imx-gst1.0-plugin=4.4.5-5 \
@@ -43,6 +44,17 @@ RUN \
 #    libdrm-libkms=2.4.84+imx-mendel3 \
 #    wayland-protocols=1.17+imx-1
 
+# Uncomment these also if using audio
+#RUN \
+#    apt-get install -y --allow-downgrades \
+#    pulseaudio-utils=12.2-4+deb10u1 \
+#    libpulse0=12.2-4+deb10u1 \
+#    libpulsedsp=12.2-4+deb10u1 \
+#    pulseaudio=12.2-4+deb10u1 \
+#    imx-board-audio=5-1 \
+#    alsa-utils=1.1.8-2 \
+#    gstreamer1.0-alsa=1.14.4+imx-5 \
+#    wget
 
 WORKDIR /usr/src/app
 
