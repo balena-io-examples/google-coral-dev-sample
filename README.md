@@ -44,5 +44,6 @@ Gstreamer debug logs during playback:
 
 > 0:00:00.321025942 19289 0xaaab0436ea00 DEBUG           GST_REGISTRY gstregistrychunks.c:878:_priv_gst_registry_chunks_load_plugin: Added plugin 'vpu.imx' plugin with 1 features from binary registry
 
+To run the project-posenet from the coral github repository, it's necessary to export XDG_RUNTIME_DIR=/tmp/ before running the video examples.
 NOTE: Video output using this sample APP is available for the Google Coral-Dev starting with BalenaOS 2.46
 
