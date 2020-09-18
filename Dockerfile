@@ -42,7 +42,8 @@ RUN \
 #    gstreamer1.0-gl=1.14.4+imx-5 \
 #    gstreamer1.0-tools=1.14.4+imx-3 \
 #    libdrm-libkms=2.4.84+imx-mendel3 \
-#    wayland-protocols=1.17+imx-1
+#    wayland-protocols=1.17+imx-1 \
+#    python3-edgetpuvision
 
 # Uncomment these also if using audio
 #RUN \
